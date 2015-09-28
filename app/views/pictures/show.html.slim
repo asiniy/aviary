@@ -1,0 +1,7 @@
+p#notice = notice
+
+p = image_tag attachment_url(@picture, :image, :fill, 300, 300)
+
+= link_to 'Edit', edit_picture_path(@picture)
+'|
+= link_to 'Root', root_path

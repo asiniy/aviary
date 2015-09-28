@@ -14,7 +14,10 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Added by Alex
 gem 'slim-rails'
+gem 'refile', require: 'refile/rails'
+gem 'refile-mini_magick'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

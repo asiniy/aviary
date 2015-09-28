@@ -1,0 +1,10 @@
+= link_to 'New Picture', new_picture_path
+
+h1 Listing pictures
+
+- @pictures.each do |picture|
+  p
+    => image_tag attachment_url(picture, :image, :fill, 300, 300)
+    => link_to 'Show', picture
+    => link_to 'Edit', edit_picture_path(picture)
+    => link_to 'Destroy', picture, data: {:confirm => 'Are you sure?'}, :method => :delete
