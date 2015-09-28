@@ -1,7 +1,7 @@
 h1 Editing picture
 
-== render 'form'
+p = image_tag attachment_url(@picture, :image), id: 'aviary_image'
 
-= link_to 'Show', @picture
+=> link_to 'Show', @picture
 '|
 = link_to 'Root', root_path

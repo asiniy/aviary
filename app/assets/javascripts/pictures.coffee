@@ -1,3 +1,17 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+ready = ->
+  if $('#aviary_image').length
+    featherEditor = new (Aviary.Feather)(
+      apiKey: '4ead817743744c709082cd898622853b'
+      onSave: (imageID, newURL) ->
+        img = document.getElementById(imageID)
+        img.src = newURL
+      onError: (errorObj) ->
+        console.log errorObj
+      onLoad: () ->
+        featherEditor.launch
+          image: 'aviary_image',
+          url: $('#aviary_image').attr('src')
+    )
+
+$(document).ready(ready)
+$(document).on('page:load', ready)
