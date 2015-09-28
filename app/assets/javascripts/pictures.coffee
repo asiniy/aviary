@@ -3,8 +3,8 @@ ready = ->
     featherEditor = new (Aviary.Feather)(
       apiKey: '4ead817743744c709082cd898622853b'
       onSave: (imageID, newURL) ->
-        img = document.getElementById(imageID)
-        img.src = newURL
+        $('form #picture_remote_image_url').val(newURL)
+        $('form').submit()
       onError: (errorObj) ->
         console.log errorObj
       onLoad: () ->

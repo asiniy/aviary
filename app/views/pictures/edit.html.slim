@@ -2,6 +2,9 @@ h1 Editing picture
 
 p = image_tag attachment_url(@picture, :image), id: 'aviary_image'
 
+= form_for @picture do |f|
+  = f.hidden_field :remote_image_url
+
 => link_to 'Show', @picture
 '|
 = link_to 'Root', root_path
